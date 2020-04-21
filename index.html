@@ -14,7 +14,9 @@
 </head>
 
 <body>
+  <!--BARRA DE NAVEGACION-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!--apartado para cambiar vista para otros dispositivos-->
     <a class="navbar-brand" href="#">DevTv</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,13 +26,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Colaborar</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="form.html">Colaborar</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Documentacion</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="detail.html">Documentacion</a>
         </li>
         <!--<<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -54,21 +56,286 @@
       </form>
     </div>
   </nav>
+  <!--SLIDER-->
+  <div class="container mt-1">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <!--apartado que define la clase carousel y slader ¡muy importante tener en cuenta que la id de esta linea podemos cambiarala pero abra que hacerlo en todos los demas apartados-->
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <!--apartado para los 3 botones parte inferior del slader -->
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <!--apartado para los 3 botones parte inferior del slader-->
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <!--apartado para los 3 botones  parte inferior del slader-->
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!--el valor active señala por cual empieza por defecto,se cambia aqui y en el apartado "data-slide-to" de mas arriba-->
+          <img src="imagenes/yours.jpg" class="d-block w-100" alt="...">
+          <!--imagebes carusel-->
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Primera imagen carousel</h5>
+            <!--titulo de imagen de carousel-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <!--informacion de tarjeta carousel-->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/splash.jpg" class="d-block w-100" alt="...">
+          <!--imagenes carusel-->
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Segunda imagen carousel</h5>
+            <!--titulo de imagen de carousel-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <!--informacion de tarjeta carousel-->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/simple.jpg" class="d-block w-100" alt="...">
+          <!--imagenes carusel-->
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Tercera imagen carousel</h5>
+            <!--titulo de imagen de carousel-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <!--informacion de tarjeta carousel-->
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <!--botones laterales del slader,aqui se señala cual es nex o previus-->
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Proximo</span>
+      </a>
+    </div>
+  </div>
+  <!--NAV-->
+  <div class="container">
+    <!--Para que ce centre nuestro nav lo metemos dentro de un contenedor como ahora esta-->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#Seccion1" role="tab">Populares</a>
+        <!--Nombre de cada seccion del tag-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#Seccion2" role="tab">Recién subidos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#Seccion3" role="tab">Mas comentarios</a>
+      </li>
+      <!--
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a><!--parte obviada por no necesitarla
+      </li>-->
+    </ul>
+    <!--session de tag-->
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="Seccion1" role="tabpanel" aria-labelledby="home-tab">Sección1</div>
+      <div class="card-columns mt-3">
+        <div class="card">
+          <img src="imagenes/unicormio_rosa.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Unicornio rosa</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <div class="card" style="width: 18rem;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3">
+          <blockquote class="blockquote mb-0 card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">
+              <small class="text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card">
+          <img src="imagenes/unicornio_azul.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Unicornio azul</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card bg-primary text-white text-center p-3">
+          <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+            <footer class="blockquote-footer text-white">
+              <small>
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          <div class="card-footer">Pie de pagina</div>
+        </div>
+        <div class="card">
+          <img src="imagenes/unicornio_multicolor.jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card p-3 text-right">
+          <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">
+              <small class="text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card">
+          <div class="card-header">Cabecera</div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2">Subtitulo card</h6>
+            <p class="card-text">This is another card with title and supporting text below. This card has some
+              additional content to make it slightly taller overall.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="#" class="card-link">link</a>
+          </div>
+        </div>
+        <!--seccion tarjeta-->
+      </div>
+
+      <div class="tab-pane fade" id="Seccion2" role="tabpanel" aria-labelledby="profile-tab">Seccion2
+        <!--session tarjeta-->
+        <div class="card-columns mt-3">
+          <div class="card">
+            <img src="imagenes/unicormio_rosa.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Unicornio rosa</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card p-3">
+            <blockquote class="blockquote mb-0 card-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <footer class="blockquote-footer">
+                <small class="text-muted">
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="card">
+            <img src="imagenes/unicornio_azul.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Unicornio azul</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card bg-primary text-white text-center p-3">
+            <blockquote class="blockquote mb-0">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+              <footer class="blockquote-footer text-white">
+                <small>
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+            <div class="card-footer">Pie de pagina</div>
+          </div>
+          <div class="card">
+            <img src="imagenes/unicornio_multicolor.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card p-3 text-right">
+            <blockquote class="blockquote mb-0">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <footer class="blockquote-footer">
+                <small class="text-muted">
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="card">
+            <div class="card-header">Cabecera</div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2">Subtitulo card</h6>
+              <p class="card-text">This is another card with title and supporting text below. This card has some
+                additional content to make it slightly taller overall.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <a href="#" class="card-link">link</a>
+            </div>
+          </div>
+          <!--seccion tarjeta-->
+        </div>
+        <div class="tab-pane fade" id="Seccion3" role="tabpanel" aria-labelledby="contact-tab">Sección3</div>
+
+        <!--secciones de los tag-->
+      </div>
+
+    </div>
+    <!--footer-->
+    <div class="container ">
+      <hr>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Unicornios voladores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Github</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Doc Bootstrap</a>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>-->
+      </ul>
+    </div>
 
 
 
 
 
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="public/js/bootstrap.min.js"></script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="public/js/bootstrap.min.js"></script>
 </body>
+
 
 </html>
